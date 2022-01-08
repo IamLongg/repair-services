@@ -1,0 +1,43 @@
+.contact {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    .map {
+      flex: 1 1 42rem;
+      width: 100%;
+    }
+    form {
+      flex: 1 1 42rem;
+      padding: 2rem;
+      border: $border;
+      background-color: $black;
+      h3 {
+        @include titleText(2.5rem);
+        padding: 1rem;
+        color: $white;
+      }
+      .inputBox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        input {
+          width: 49%;
+        }
+      }
+      .inputBox input,
+      textarea {
+        padding: 1.2rem;
+        font-size: 1.6rem;
+        color: $light-color;
+        margin: 0.7rem 0;
+        border: none;
+        outline: none;
+        border-bottom: $black;
+      }
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+}

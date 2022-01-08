@@ -1,0 +1,32 @@
+.facilities {
+  background-color: $light-bg;
+  &-box-container {
+    @include grid(30rem);
+    &-box {
+      background: $white;
+      padding: 3rem;
+      text-align: center;
+      border: $border;
+      box-shadow: $box-shadow;
+      transition: $transition;
+      &:hover {
+        background-color: $black;
+        h3,
+        p {
+          color: $white;
+        }
+      }
+      img {
+        height: 10rem;
+        margin: 0 auto 0.5rem;
+      }
+      h3 {
+        @include titleText(2rem);
+        padding: 1rem 0;
+      }
+      p {
+        @include graphText(1.4rem);
+      }
+    }
+  }
+}

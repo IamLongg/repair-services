@@ -1,0 +1,59 @@
+.reviews {
+  background-color: $light-bg;
+  &-box-container {
+    @include grid(30rem);
+    &-box {
+      padding: 3rem;
+      text-align: center;
+      background-color: $white;
+      box-shadow: $box-shadow;
+      border: $border;
+      transition: $transition;
+      &:hover {
+        background: $black;
+        .text p {
+          color: $white;
+        }
+        .user h3 {
+          color: $white;
+        }
+      }
+      .star {
+        i {
+          color: $blue;
+          font-size: 1.8rem;
+        }
+      }
+      .text {
+        position: relative;
+        padding: 1.5rem 0;
+        z-index: 0;
+        i {
+          font-size: 7rem;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          opacity: 0.3;
+          color: $blue;
+        }
+        p {
+          @include graphText(1.4rem);
+        }
+      }
+      .user {
+        img {
+          width: 7rem;
+          height: 7rem;
+          object-fit: cover;
+          border-radius: 50%;
+          margin: 0 auto;
+        }
+        h3 {
+          @include titleText(2rem);
+        }
+      }
+    }
+  }
+}

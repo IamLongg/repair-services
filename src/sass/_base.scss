@@ -1,0 +1,71 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: $white;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $blue;
+    border-radius: 5rem;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  background-color: $white;
+  border: $border;
+  @include titleText(1.8rem);
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    background: $blue;
+    color: $white;
+  }
+}
+
+section {
+  padding: 3rem 10%;
+}
+
+.heading {
+  @include titleText(4rem);
+  text-align: center;
+  margin-bottom: 3rem;
+  span {
+    color: $blue;
+  }
+}
+
+@include maxWidth(1200px) {
+  section {
+    padding: 3rem 5%;
+  }
+}
+
+@include maxWidth(991px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@include maxWidth(768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@include maxWidth(450px) {
+  html {
+    font-size: 50%;
+  }
+}

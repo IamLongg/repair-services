@@ -1,0 +1,44 @@
+.team {
+  &-box-container {
+    @include grid(25rem);
+    align-items: flex-start;
+
+    &-box {
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+      transition: $transition;
+      &:hover {
+        .team-box-container-box-content {
+          margin-bottom: 0;
+        }
+      }
+      img {
+        width: 100%;
+      }
+      &-content {
+        padding: 2rem;
+        margin-bottom: -7rem;
+        h3 {
+          @include titleText(2rem);
+        }
+        p {
+          @include graphText(1.6rem);
+          padding: 0.5rem 0;
+        }
+      }
+      &-share {
+        margin-top: 1.5rem;
+        a {
+          height: 4.5rem;
+          width: 4.5rem;
+          line-height: 4.5rem;
+          font-size: 1.8rem;
+          margin: 0 0.3rem;
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+}

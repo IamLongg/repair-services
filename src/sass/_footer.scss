@@ -1,0 +1,49 @@
+.footer {
+  background-color: $light-bg;
+  &-box-container {
+    @include grid(25rem);
+    &-box {
+      h3 {
+        @include titleText(2.2rem);
+        padding: 1rem 0;
+      }
+      .link {
+        display: block;
+        padding: 0.5rem 0;
+        @include graphText(1.5rem);
+        i {
+          padding-right: 0.5rem;
+          color: $blue;
+        }
+      }
+      p {
+        padding: 0.5rem 0;
+        @include graphText(1.6rem);
+        span {
+          color: $blue;
+        }
+      }
+      .email {
+        width: 100%;
+        padding: 1.6rem 1.4rem;
+        border: $border;
+        font-size: 1.6rem;
+        color: $light-color;
+        margin-bottom: 1rem;
+      }
+      .share {
+        margin-top: 1rem;
+        a {
+          height: 4.5rem;
+          width: 4.5rem;
+          line-height: 4.5rem;
+          font-size: 1.6rem;
+          background-color: $black;
+          color: $white;
+          text-align: center;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
